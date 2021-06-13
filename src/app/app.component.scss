@@ -1,0 +1,24 @@
+.content-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.subcontainer {
+  width: 90%;
+  height: auto;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(235, 235, 235);
+}

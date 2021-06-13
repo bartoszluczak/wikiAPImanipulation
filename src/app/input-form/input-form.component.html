@@ -1,0 +1,32 @@
+<div class="input-form-container">
+  <form class="search-form" [formGroup]="searchForm">
+    <mat-form-field class="search-form-field input-field">
+      <mat-label>Search phrase</mat-label>
+      <input matInput type="text" formControlName="searchPhrase" (input)="searchForPhrase($event)" #inputValue>
+      <mat-icon-button *ngIf="searchFormControls.searchPhrase.value" matSuffix mat-icon-button aria-label="Clear"
+        (click)="clearInput('searchPhrase')">
+        <mat-icon>close</mat-icon>
+      </mat-icon-button>
+      <mat-error *ngIf="searchFormControls.searchPhrase.hasError('minlength')">
+        Minimum length is 3
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="replace-form-field input-field">
+      <mat-label>Raplce with</mat-label>
+      <input matInput type="text" formControlName="replacePhrase">
+      <mat-icon-button *ngIf="searchFormControls.replacePhrase.value" matSuffix mat-icon-button aria-label="Clear"
+        (click)="clearInput('replacePhrase')">
+        <mat-icon>close</mat-icon>
+      </mat-icon-button>
+      <mat-error *ngIf="searchFormControls.replacePhrase.hasError('minlength')">
+        Minimum length is 3
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div class="buttons-container">
+    <button mat-raised-button color="accent" (click)="submitSearch()">Search</button>
+    <button mat-raised-button color="primary" (click)="replaceFirstOccurrence()">Replace</button>
+    <button mat-raised-button color="primary" (click)="replaceAll()">Replace All</button>
+  </div>
+</div>

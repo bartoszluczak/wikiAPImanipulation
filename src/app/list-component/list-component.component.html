@@ -1,0 +1,7 @@
+<div class="results-content-container">
+  <div class="single-result-container" *ngFor="let result of searchResults">
+    <h4>{{ result.title }}</h4>
+    <p class="snippet" [innerHTML]="result.snippet | highlightSearch: searchedPhrase">
+    </p>
+  </div>
+</div>

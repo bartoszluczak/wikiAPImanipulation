@@ -1,0 +1,21 @@
+.input-form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  margin-right: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  button {
+    margin-right: 10px;
+  }
+}
